@@ -238,7 +238,7 @@
                             android:layout_height="55dp"
                             android:layout_marginStart="25dp"
                             android:onClick="modificarButton"
-                            android:text="Consultar"
+                            android:text="modificar"
                             android:textColor="@color/buttonsMain"
                             android:textStyle="bold"
                             app:backgroundTint="@color/colorPrimaryDark"

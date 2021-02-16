@@ -18,7 +18,6 @@
         <activity android:name=".Modificar" />
         <activity android:name=".Consultar" />
         <activity android:name=".IngresoProductos" />
-        <activity android:name=".Login" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

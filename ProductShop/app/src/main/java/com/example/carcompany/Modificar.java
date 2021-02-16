@@ -2,6 +2,7 @@ package com.example.carcompany;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
@@ -50,7 +51,58 @@ public class Modificar extends AppCompatActivity {
 
 
 
-    public void modificarButton(View view){}
+    public void modificarButton(View view){
+
+        String codigo = codigoModificar.getText().toString();
+        String cantidad = cantidadProductModificar.getText().toString();
+        String cedula = cedulaClienteModificar.getText().toString();
+        String nombres = nombresClienteModificar.getText().toString();
+        String apellidos = apellidosClienteModificar.getText().toString();
+        String latitud = latitudModificar.getText().toString();
+        String longitud = longitudModificar.getText().toString();
+        String pago = PaymentMethodModificar.getSelectedItem().toString();
+
+
+        try {
+
+            AdminDatabase admin = new AdminDatabase(Modificar.this,"AllProducts", null, 1);
+            SQLiteDatabase data = admin.getReadableDatabase();
+
+            ContentValues register = new ContentValues();
+
+            /*
+                * dataBaseProducto.execSQL("CREATE TABLE producto (id INTEGER PRIMARY KEY AUTOINCREMENT, codigo TEXT, cantidad TEXT," +
+                " cedula TEXT, nombres TEXT, apellidos TEXT, latitud TEXT, longitud TEXT, pago TEXT )");
+                *
+                * */
+
+            register.put("codigo",codigo);
+            register.put("cantidad",cantidad);
+            register.put("cedula",cedula);
+            register.put("nombres",nombres);
+            register.put("apellidos",apellidos);
+            register.put("latitud",latitud);
+            register.put("longitud",longitud);
+            register.put("pago",pago);
+
+            int cambio = data.update("producto",register, "codigo='"+codigo+"'",null);
+            data.close();
+
+            if (cambio == 1 ){
+                Toast.makeText(this, "Los datos fueron cambiados exitosamente", Toast.LENGTH_SHORT).show();
+            }else{
+                Toast.makeText(this, "Los campos no se pueden modificar", Toast.LENGTH_SHORT).show();
+            }
+
+
+
+
+        }catch (Exception e ){
+            e.printStackTrace();
+        }
+
+
+    }
 
 
     public void consultarModificarButton (View view){
@@ -81,7 +133,7 @@ public class Modificar extends AppCompatActivity {
                 }else{
                     Toast.makeText(this, "No hay datos que coincidan con el codigo ingresado", Toast.LENGTH_SHORT).show();
                 }
-                
+
             }catch (Exception e ){
                 e.printStackTrace();
             }

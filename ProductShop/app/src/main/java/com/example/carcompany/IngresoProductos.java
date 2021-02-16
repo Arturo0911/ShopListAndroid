@@ -1,5 +1,6 @@
 package com.example.carcompany;
 
+import androidx.annotation.IntegerRes;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.database.sqlite.SQLiteDatabase;
 import android.location.Location;
@@ -42,6 +44,11 @@ public class IngresoProductos extends AppCompatActivity {
     LocationListener locationListener;
 
     Credential credential = null;
+
+    public void Regresar(View view){
+        Intent intent = new Intent(IngresoProductos.this, MainActivity.class);
+        startActivity(intent);
+    }
 
 
 
@@ -210,6 +217,8 @@ public class IngresoProductos extends AppCompatActivity {
         longitud.setText("");
 
     }
+
+
 
 
 

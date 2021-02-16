@@ -6,4 +6,254 @@
     android:layout_height="match_parent"
     tools:context=".Eliminar">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:orientation="vertical">
+
+                    <!-- Media -->
+                    <ImageView
+                        android:layout_width="125dp"
+                        android:layout_height="135dp"
+                        android:layout_marginStart="110dp"
+                        android:scaleType="centerCrop"
+                        app:srcCompat="@drawable/download" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                        <!-- Title, secondary and supporting text -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Ingresa el codigo del producto"
+                            android:layout_marginStart="45dp"
+                            android:textAppearance="?attr/textAppearanceHeadline6"
+                            />
+
+                    </LinearLayout>
+
+                    <!-- Buttons -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="8dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:layout_width="350dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="15dp"
+                            android:layout_marginBottom="15dp"
+                            app:boxStrokeColor="@color/colorPrimaryDark"
+                            android:textColorHint="@color/colorPrimaryDark"
+                            app:hintTextColor="@color/colorPrimaryDark"
+                            android:hint="codigo"
+
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/codigoEliminar"
+                                android:layout_width="match_parent"
+                                android:layout_height="49dp" />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="7dp"
+                        android:orientation="horizontal">
+
+                        <Button
+                            android:id="@+id/buttonConsultaEliminar"
+                            android:layout_width="130dp"
+                            android:layout_height="55dp"
+                            android:layout_marginStart="25dp"
+                            android:onClick="consultaEliminarButton"
+                            android:text="Consultar"
+                            android:textColor="@color/buttonsMain"
+                            android:textStyle="bold"
+                            app:backgroundTint="@color/colorPrimaryDark"
+                            app:cornerRadius="?attr/dialogPreferredPadding" />
+
+                        <Button
+                            android:id="@+id/buttonregresarEliminar"
+                            android:layout_width="120dp"
+                            android:layout_height="55dp"
+                            android:layout_marginStart="50dp"
+                            android:onClick="regresarEliminarButton"
+                            android:text="Regresar"
+                            android:textColor="@color/buttonsMain"
+                            android:textStyle="bold"
+                            app:backgroundTint="@color/colorPrimaryDark"
+                            app:cornerRadius="?attr/dialogPreferredPadding" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="25dp"
+                        android:orientation="vertical">
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:layout_width="350dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:hint="Cantidad"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/cantidadEliminar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:layout_width="350dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:hint="cedula cliente"
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/cedulaEliminar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:layout_width="350dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:hint="Nombres"
+
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/nombresEliminar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textEmailAddress"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:layout_width="350dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:hint="Apellidos"
+
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/apellidosEliminar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textEmailAddress"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:layout_width="350dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:hint="latitud"
+
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/latitudEliminar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textEmailAddress"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+
+                            android:layout_width="350dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+                            android:hint="longitud"
+
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/longitudEliminar"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:inputType="textEmailAddress"
+                                />
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <com.google.android.material.textfield.TextInputLayout
+                            android:layout_width="350dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="15dp"
+
+                            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                            <Spinner
+                                android:id="@+id/PaymentMethodEliminar"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp">
+
+                            </Spinner>
+
+                        </com.google.android.material.textfield.TextInputLayout>
+
+                        <Button
+                            android:id="@+id/buttonEliminar"
+                            android:layout_width="130dp"
+                            android:layout_height="55dp"
+                            android:layout_marginStart="25dp"
+                            android:onClick="eliminarButton"
+                            android:text="Eliminar"
+                            android:textColor="@color/buttonsMain"
+                            android:textStyle="bold"
+                            app:backgroundTint="@color/colorPrimaryDark"
+                            app:cornerRadius="?attr/dialogPreferredPadding" />
+
+
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+
+
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+    </ScrollView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
