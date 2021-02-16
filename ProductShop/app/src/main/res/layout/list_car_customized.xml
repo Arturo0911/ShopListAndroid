@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="7dp"
+        android:layout_marginStart="35dp"
+        >
+
+        <ImageView
+            android:id="@+id/imageCustomized"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            app:srcCompat="@drawable/paint"></ImageView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/noOrder"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="5dp"
+                    android:textSize="16dp"
+                    android:text="Order number 1"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="italic"
+                    >
+                </TextView>
+                <TextView
+                    android:id="@+id/modelCar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="40dp"
+                    android:textSize="16dp"
+                    android:text="Model: Grand vitara"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="italic"
+                    >
+                </TextView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/plateCar"
+                    android:layout_width="match_parent"
+                    android:text="Plate: GYE-2526"
+                    android:layout_height="28dp"
+                    android:layout_marginStart="5dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textStyle="italic">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/serviceCar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:textSize="16dp"
+                    android:text="Service: Car washing"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:layout_marginStart="37dp"
+
+                    android:textStyle="italic">
+                </TextView>
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+            </LinearLayout>-->
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

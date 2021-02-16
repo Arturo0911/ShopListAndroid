@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">CarCompany</string>
+    <string name="cancel">Cancel</string>
+    <string name="login_title">The best services for your car</string>
+    <string name="user_field">username</string>
+    <string name="pass_field">password</string>
+    <string name="login_button">LOGIN</string>
+    <string name="no_count">create an account</string>
+    <string name="forgot_password">Forgot password</string>
+</resources>
