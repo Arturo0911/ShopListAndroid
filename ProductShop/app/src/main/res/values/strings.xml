@@ -7,4 +7,14 @@
     <string name="login_button">LOGIN</string>
     <string name="no_count">create an account</string>
     <string name="forgot_password">Forgot password</string>
+
+
+    <string-array name="metodospago">
+        <item>VISA</item>
+        <item>PAYPAL</item>
+        <item>MASTERCARD</item>
+        <item>BITCOIN</item>
+        <item>AMERICAN</item>
+    </string-array>
+
 </resources>

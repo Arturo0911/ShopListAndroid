@@ -26,28 +26,26 @@
                 android:orientation="vertical">
 
                 <!-- Media -->
-                <ImageView
-                    android:id="@+id/carService"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:background="@color/white"
-                    android:padding="5dp"
-                    android:layout_marginStart="55dp"
-                    app:srcCompat="@drawable/wash"
-                    android:scaleType="centerCrop"
-                    android:contentDescription="string"
-                    />
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 android:padding="16dp">
 
+                <ImageView
+                    android:layout_width="125dp"
+                    android:layout_height="135dp"
+                    android:layout_marginStart="110dp"
+                    app:srcCompat="@drawable/download"
+                    android:scaleType="centerCrop"
+                    />
+
                 <!-- Title, secondary and supporting text -->
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Choose the service for you"
+                    android:text="Escoge el tipo de funcion"
                     android:textStyle="italic"
                     android:textSize="20dp"
 
@@ -55,40 +53,7 @@
             </LinearLayout>
 
                 <!-- Buttons -->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="8dp"
-                    android:orientation="horizontal">
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/carWashing"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginEnd="8dp"
-                        android:textStyle="bold"
-                        android:text="WASHING"
-                        android:textColor="@color/colorPrimaryDark"
-                        style="?attr/borderlessButtonStyle"
-                        />
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/carMaintenance"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Maintenance"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textStyle="bold"
-                        style="?attr/borderlessButtonStyle"
-                        />
-                    <com.google.android.material.button.MaterialButton
-                        android:id="@+id/carPaint"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textStyle="bold"
-                        android:text="Painting"
-                        style="?attr/borderlessButtonStyle"
-                        />
-                </LinearLayout>
+
 
             </LinearLayout>
 
@@ -101,133 +66,36 @@
             android:layout_marginTop="15dp"
             android:layout_marginStart="30dp"
             android:orientation="vertical">
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/carPlate"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:hint="input the car's plate"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                >
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/carMake"
-                    android:layout_width="170dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:hint="Input the  make"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="15dp"
+                android:orientation="horizontal">
 
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        />
+                <Button
+                    android:id="@+id/ingresar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="55dp"
+                    android:layout_marginStart="25dp"
+                    android:textStyle="bold"
+                    app:cornerRadius="?attr/dialogPreferredPadding"
+                    android:onClick="sendOnclickButton"
+                    android:textColor="@color/buttonsMain"
+                    app:backgroundTint="@color/colorPrimaryDark"
+                    android:text="Ingresar" />
 
-                </com.google.android.material.textfield.TextInputLayout>
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/carModel"
-                    android:layout_width="170dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginBottom="15dp"
-                    android:hint="Choose the model"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        />
-
-                </com.google.android.material.textfield.TextInputLayout>
+                <Button
+                    android:id="@+id/visualizar"
+                    android:layout_width="150dp"
+                    android:layout_height="55dp"
+                    android:textStyle="bold"
+                    app:cornerRadius="?attr/dialogPreferredPadding"
+                    android:layout_marginStart="15dp"
+                    android:onClick="consultar"
+                    android:textColor="@color/buttonsMain"
+                    app:backgroundTint="@color/colorPrimaryDark"
+                    android:text="Consultar" />
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal"
-                >
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/carYear"
-                    android:layout_width="170dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="15dp"
-                    android:hint="Choose the year"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        />
-
-                </com.google.android.material.textfield.TextInputLayout>
-                <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/carColor"
-                    android:layout_width="170dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginBottom="15dp"
-                    android:hint="Choose the color"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                    <com.google.android.material.textfield.TextInputEditText
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        />
-
-                </com.google.android.material.textfield.TextInputLayout>
-            </LinearLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/ownerName"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:hint="Complete names"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/ownerLastname"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:hint="Complete lastnames"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/ownerCredentials"
-                android:layout_width="350dp"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="15dp"
-                android:hint="Complete the credentials"
-
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    />
-
-            </com.google.android.material.textfield.TextInputLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -241,10 +109,10 @@
                     android:layout_marginStart="25dp"
                     android:textStyle="bold"
                     app:cornerRadius="?attr/dialogPreferredPadding"
-                    android:onClick="sendOnclickButton"
+                    android:onClick="borrar"
                     android:textColor="@color/buttonsMain"
                     app:backgroundTint="@color/colorPrimaryDark"
-                    android:text="Send" />
+                    android:text="Borrar" />
 
                 <Button
                     android:id="@+id/viewListButton"
@@ -252,13 +120,12 @@
                     android:layout_height="55dp"
                     android:textStyle="bold"
                     app:cornerRadius="?attr/dialogPreferredPadding"
-                    android:layout_marginStart="55dp"
-                    android:onClick="viewOnclickButton"
+                    android:layout_marginStart="25dp"
+                    android:onClick="modificar"
                     android:textColor="@color/buttonsMain"
                     app:backgroundTint="@color/colorPrimaryDark"
-                    android:text="view list" />
+                    android:text="Modificar" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-
 </ScrollView>

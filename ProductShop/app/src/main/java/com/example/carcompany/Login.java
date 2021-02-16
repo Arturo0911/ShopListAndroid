@@ -10,7 +10,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
-import com.example.carcompany.connections.ConnectionServer;
+
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 
@@ -26,7 +26,7 @@ public class Login extends AppCompatActivity {
 
         userField = (TextInputEditText) findViewById(R.id.userField);
         passField = (TextInputEditText) findViewById(R.id.passField);
-        ConnectionServer connection = new ConnectionServer();
+        //ConnectionServer connection = new ConnectionServer();
 
 
         String username = userField.getText().toString();
@@ -35,7 +35,7 @@ public class Login extends AppCompatActivity {
         try {
             Toast.makeText(this, "the user "+userField.getText()+" and the password "+passField.getText(), Toast.LENGTH_SHORT).show();
             Log.i("info", userField.getText().toString().getClass().getName());
-            connection.sendToServer(username,password);
+            //connection.sendToServer(username,password);
         }catch (Exception e){
             e.printStackTrace();
             Toast.makeText(this, "Error by: "+e.toString(), Toast.LENGTH_SHORT).show();

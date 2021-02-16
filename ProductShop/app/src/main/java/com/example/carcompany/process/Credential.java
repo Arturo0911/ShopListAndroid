@@ -2,54 +2,58 @@ package com.example.carcompany.process;
 
 import android.content.Intent;
 
-public class Credential {
-    /**
-     *
-     * @param credential the credential to be tested
-     *  if is correct retrurn true, otherwise return false
-     */
-    public boolean checkCredential(String credential){
+import java.util.ArrayList;
 
-        String[] vectorCed = credential.split("");
+public class Credential {
+
+
+    public boolean verificarCedula(String credential){
+
+        ArrayList<String> cedula = new ArrayList<>();
+
+        for (int i = 0; i < credential.split("").length; i++){
+            cedula.add(credential.split("")[i]);
+        }
 
         try {
-            int sizeVector = vectorCed.length;
-            int digitVerify = Integer.parseInt(vectorCed[sizeVector - 1]);
-            int thirdDigit  = Integer.parseInt(vectorCed[3]);
-            int sum = 0;
 
+            int tercerDigito = Integer.parseInt( cedula.get(2));
+            int ultimoDigito = Integer.parseInt( cedula.get(9));
+            int suma = 0;
+            if (cedula.size() == 10 && tercerDigito < 6){
 
-            if (sizeVector == 11 && thirdDigit < 6){
-                for (int i = 0; i < vectorCed.length-1; i++){
+                for (int i = 0; i < cedula.size() - 1; i++){
 
-                    if (i % 2 == 0){
-                        if(Integer.parseInt((vectorCed[i])) * 2 >= 10 ){
-                            sum += (Integer.parseInt((vectorCed[i])) * 2) - 9 ;
+                    if (i%2==0){
+
+                        if ( Integer.parseInt(cedula.get(i))*2 >=10 ){
+                            suma += Integer.parseInt(cedula.get(i))*2 - 9;
                         }else{
-                            sum += Integer.parseInt((vectorCed[i])) * 2;
+                            suma += Integer.parseInt(cedula.get(i))*2;
                         }
+
                     }else{
-                        sum += Integer.parseInt((vectorCed[i]));
+                        suma += Integer.parseInt(cedula.get(i));
                     }
 
                 }
 
-                String[] finalArray = String.valueOf(sum).split("");
-                int lastDigit = Integer.parseInt(finalArray[2]);
+                int digitoVerificador = Integer.parseInt( String.valueOf(suma).split("")[1]);
 
-                return 10 - lastDigit  == digitVerify;
+                return 10 - digitoVerificador == ultimoDigito ;
+
+
 
             }else{
+
                 return false;
             }
 
 
         }catch (Exception e){
+            e.printStackTrace();
             return false;
         }
-
-
-
 
     }
 }
