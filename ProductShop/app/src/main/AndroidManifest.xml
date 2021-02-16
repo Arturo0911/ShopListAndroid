@@ -14,20 +14,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CarCompany">
-        <activity android:name=".Consultar"></activity>
-        <activity android:name=".IngresoProductos">
-
-        </activity>
+        <activity android:name=".Eliminar"></activity>
+        <activity android:name=".Modificar" />
+        <activity android:name=".Consultar" />
+        <activity android:name=".IngresoProductos" />
         <activity android:name=".Login" />
         <activity android:name=".MainActivity">
-
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
     </application>
 

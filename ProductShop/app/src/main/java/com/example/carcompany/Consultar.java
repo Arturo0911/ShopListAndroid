@@ -73,7 +73,7 @@ public class Consultar extends AppCompatActivity {
                 * */
 
                 if (cursor.moveToFirst()){
-                    Toast.makeText(this, ""+cursor.getString(2), Toast.LENGTH_SHORT).show();
+                    //Toast.makeText(this, ""+cursor.getString(2), Toast.LENGTH_SHORT).show();
                     cantidadProduct.setText(cursor.getString(2));
                     cedulaCliente.setText(cursor.getString(3));
                     nombresCliente.setText(cursor.getString(4));

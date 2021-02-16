@@ -30,9 +30,18 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void borrar(View view){}
+    public void borrar(View view){
 
-    public void modificar(View view){}
+        Intent borrarIntent = new Intent(MainActivity.this, Eliminar.class);
+        startActivity(borrarIntent);
+
+    }
+
+    public void modificar(View view){
+
+        Intent intent = new Intent(MainActivity.this, Modificar.class);
+        startActivity(intent);
+    }
 
 
     @Override
